@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de texto - Solgenis Cardenas</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="presentacion__titulo">
+                ¡Bienvenido al encriptador de texto!
+            </h1>
+            
+        </header>
+        <main>
+            <section>
+             
+                <textarea class="textarea" rows="22" cols="70" spellcheck="false" placeholder="ingrese texto aqui"></textarea>
+
+                <div class="area__disclaimer">
+        
+                    <h6 class="texto__disclaimer">Por favor sólo ingresar minúsculas y texto.</h6>
+                        
+                </div>
+ 
+                <div class="botones">
+                    <button class="boton__encriptar" onclick="botonEncriptar();">Encriptar</button>
+                    <button class="boton__desencriptar" onclick="botonDesencriptar();">Desencriptar</button>
+                </div>
+
+            </section>
+
+            <section >
+               
+                <div class="texto__salida">
+                        
+                    <textarea class="mensaje" rows="20" cols="40" spellcheck="false"  readonly>Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.</textarea>
+
+        
+                </div>
+
+                
+
+                <div class="container">
+                    <button onclick="copiarTexto()"  class="copiar" >Copiar</button>
+                </div>
+                
+        
+            </section>
+                
+        </main>
+
+        <footer class="footer">
+            <p>Desarrollado por <strong class="firma_footer"> Solgenis Cardenas </strong>
+             </p>
+        </footer>
+
+        <script src="main.js" defer></script>
+
+    </body>
+    </html>

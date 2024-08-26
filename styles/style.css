@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #22D4FD;
+    --color-terciario: #F6F6F6;
+    --color-hoverdos: #898989;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+    --fuente-tangerine: "Tangerine", serif;
+}
+
+
+* {
+    padding: 0;
+    margin:0;
+    font-family: var(--fuente-krona);
+}
+
+.header{
+    padding: 3% 0% 0% 5%;
+}
+
+.presentacion__titulo{
+    text-align: left;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    font-size: 1.2rem ;
+    font-weight: 400;
+
+}
+
+
+main{
+    display: flex;
+    padding: 2% 2% 2% 5%;
+    gap: 5%;
+}
+
+
+body{
+    background-color: var(--color-primario); 
+}
+
+
+.textarea{
+    width: 100%;
+    height: 50%;
+    border-radius: 1rem;
+    border: none;
+    text-align: left;
+    color: var(--color-primario);
+    padding: 5% 2% 2% 5%;
+    font-size: 0.8rem;
+    text-transform:lowercase;
+    resize: none;
+    overflow: auto;
+    
+}
+
+::placeholder{ color: var(--color-hoverdos)}
+
+
+.textarea:focus{
+    outline: none;
+}
+
+.mensaje{
+    background-image: url("/img/muneco.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: bottom;
+    text-transform:lowercase;
+    border-radius: 1rem;
+    border: none;
+    padding: 5% 2% 2% 5%;
+    resize: none;
+    overflow: auto;
+    text-decoration:"none";
+    text-align: left;
+
+}
+
+.mensaje:focus{
+    outline: none;
+}
+  
+.texto__disclaimer{
+    font-size: 0.8rem;
+    font-weight: 200;
+    gap: 2%;
+    border-radius: 1rem;
+    padding: 2% 2% 2% 2%;
+    color: var(--color-terciario);
+
+}
+
+.texto__campovacio{
+    font-size: 0.8rem;
+    font-weight: 200;
+    gap: 2%;
+    border-radius: 1rem;
+    padding: 0%
+
+}
+
+.container { text-align: center; }
+
+
+.texto__salida{
+    font-size: 0.8rem;
+    font-weight: 200;
+    gap: 2%;
+    border-radius: 1rem;
+    padding: 2% 2% 2% 2%;
+    color: var(--color-terciario);
+    justify-content: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.boton__encriptar {
+    border-radius: 1rem;
+    background: var(--color-secundario);
+    padding: 0.5rem 0.5rem;
+    width: 49%;
+    font-size: 1.0rem;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    font-weight: 400;
+    border: none;
+}
+
+.boton__desencriptar {
+    border-radius: 1rem;
+    background: var(--color-hoverdos);
+    padding: 0.5rem 0.5rem;
+    width: 49%;
+    font-size: 1.0rem;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    font-weight: 400;
+    border: none;
+}
+
+/* #copiarBoton{
+    display: none;
+}
+
+Oculta el boton copiar por defecto 
+
+*/
+
+.copiar{
+    border-radius: 1rem;
+    background: var(--color-secundario);
+    padding: 0.5rem 0.5rem;
+    width: 50%;
+    font-size: 1.0rem;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-terciario);
+    font-weight: 400;
+    padding: 0.5rem 0.5rem;
+    border: none;
+}
+
+
+.copiar:hover{
+    cursor: pointer;
+    background-color: var(--color-hoverdos);
+    border: 0.1rem solid var(--color-primario);
+    border-radius: 1rem;
+}
+
+.boton__desencriptar:hover{
+    cursor: pointer;
+    background-color: var(--color-hoverdos);
+    border: 0.1rem solid var(--color-primario);
+    border-radius: 1rem;
+}
+
+.boton__encriptar:hover{
+    cursor: pointer;
+    background-color: var(--color-hoverdos);
+    border: 0.1rem solid var(--color-primario);
+    border-radius: 1rem;
+}
+
+
+.footer{
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 0.5rem ;
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 0.8rem ;
+    font-weight: 200;
+}
+
+.firma_footer{
+    font-family: var(--fuente-tangerine);
+    font-size: 1.5rem ;
+}
+
+/* Estilos por defecto para dispositivos grandes (desktop) ya están definidos arriba */
+
+/* Estilos para tablets (pantallas con un ancho máximo de 768px) */
+@media (max-width: 768px) {
+    .header {
+        padding: 2% 2% 2% 2%;
+    }
+
+    .presentacion__titulo {
+        font-size: 1rem;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 3% 0% 0% 3%;
+        gap: 3%;
+    }
+
+    .textarea {
+        font-size: 0.7rem;
+        padding: 4% 2% 2% 4%;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton__encriptar, .boton__desencriptar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos para móviles (pantallas con un ancho máximo de 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 2% 2% 2% 2%;
+    }
+
+    .presentacion__titulo {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 2% 2% 2% 2%;
+        gap: 2%;
+    }
+
+    .textarea {
+        font-size: 0.6rem;
+        padding: 2% 2% 2% 2%;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton__encriptar, .boton__desencriptar {
+        width: 100%;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer {
+        font-size: 0.7rem;
+    }
+
+    .firma_footer {
+        font-size: 1.2rem;
+    }
+}
